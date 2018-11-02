@@ -18,6 +18,15 @@ body {
     z-index: 0;
 }
 
+.onepage-pagination{
+	left: 0px;
+}
+
+.onepage-pagination li a::before{
+	border-color: white !important;
+	background-color: white !important;
+}
+
 nav{
 	display: flex;
     position: fixed;
@@ -45,7 +54,45 @@ nav a {
 }
 
 section{
-	padding-top: 50px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section div{
+	padding: 50px;
+}
+
+
+.jumbotron h1 {
+    padding-left: 50px;
+    padding-top: 50px;
+    line-height: 2em;
+    font-weight: lighter;
+}
+.jumbotron h1 .hi {
+    font-size: 200%;
+}
+.jumbotron h1 img {
+    display: inline-block;
+    height: 40px;
+}
+.jumbotron .targets {
+    display: flex;
+    padding: 20px;
+    margin-left: 30px;
+}
+.jumbotron .targets .students, .jumbotron .targets .company {
+    padding: 10px 20px;
+    border: 1px solid var(--light);
+    border-radius: 20px;
+    margin-right: 20px;
+    transition: all .3s;
+}
+.jumbotron .targets .students:hover, .jumbotron .targets .company:hover {
+    background-color: var(--light);
+    color: var(--text);
+    cursor: pointer;
 }
 
 #particles-js {

@@ -1,9 +1,11 @@
 $(document).ready(function () {
+
+	// one pager init
 	$(".main").onepage_scroll({
 		sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
 		easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
 		// "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-		animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+		animationTime: 800,             // AnimationTime let you define how long each section takes to animate
 		pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
 		updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
 		beforeMove: function (index) { },  // This option accepts a callback function. The function will be called before the page moves.
@@ -16,6 +18,7 @@ $(document).ready(function () {
 		direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
 	});
 
+	// particle js init
 	particlesJS('particles-js',
 
 		{
@@ -136,4 +139,43 @@ $(document).ready(function () {
 		}
 
 	);
+
+	// typing init + logic
+	const wordList = ["teach!", "hack!", "gather!", "code!"];
+	let wordIndex = 0;
+	let typeWord = document.getElementById("loveableThings");
+
+	writeWord(wordList[wordIndex], 0);
+	wordIndex < wordList.length - 1 ? wordIndex++ : wordIndex = 0;
+	window.setTimeout(() => {
+		deleteWord();
+	}, 2000);
+	window.setInterval(() => {
+		writeWord(wordList[wordIndex], 0);
+		wordIndex < wordList.length - 1 ? wordIndex++ : wordIndex = 0;
+		window.setTimeout(() => {
+			deleteWord();
+		}, 2000);
+	}, 3000);
+
+
+	function writeWord(str, i) {
+		if (i <= str.length) {
+			window.setTimeout(() => {
+				typeWord.innerText = str.substr(0, i);
+				if (i != str.length) typeWord.innerText += "|";
+				writeWord(str, i + 1);
+			}, 200);
+		}
+	}
+	function deleteWord() {
+		let text = typeWord.innerText;
+		if (text.length != 0) {
+			window.setTimeout(() => {
+				typeWord.innerText = text.substr(0, text.length - 1);
+				deleteWord();
+			}, 100);
+		}
+	}
+
 });
