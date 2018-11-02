@@ -182,15 +182,14 @@ $(document).ready(function () {
 	}
 
 	// indicator click listener
-	$.map($('.dot'), (val, i) => {
+	$.map($('.dot'), (val, index) => {
 		$(val).click(() => {
-			$('.main').moveTo(i + 1);
+			$('.main').moveTo(index + 1);
 		});
 	});
 
 	// set correct scroll indicator color
 	function markAsideDot(index) {
-		console.log(index);
 		$('.dot').css("background-color", "var(--light)");
 		$('.dot:eq(' + --index + ')').css("background-color", "var(--primary2)");
 	}

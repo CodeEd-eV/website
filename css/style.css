@@ -55,7 +55,9 @@ nav a {
 
 aside {
     height: 100%;
-    width: 10%;
+	max-width: 150px;
+	width: 10%;
+	min-width: 100px;
     position: fixed;
 	text-align: center;
 	z-index: 1000;
@@ -179,7 +181,7 @@ section .landing-content{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-left: 35px !important;
+	padding-left: 35px;
 }
 
 #particles-js {
