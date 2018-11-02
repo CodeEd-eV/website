@@ -190,7 +190,10 @@ $(document).ready(function () {
 
 	// set correct scroll indicator color
 	function markAsideDot(index) {
-		$('.dot').css("background-color", "var(--light)");
-		$('.dot:eq(' + --index + ')').css("background-color", "var(--primary2)");
+		// reset color
+		$('.dot').css('background-color', 'var(--light)');
+		// set new color, last element is special case
+		let newColor = index === $('.dot').length ? 'var(--action)' : 'var(--primary2)';
+		$('.dot:eq(' + --index + ')').css('background-color', newColor);
 	}
 });
