@@ -10,6 +10,7 @@
 	<script stype="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	 crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://rawgit.com/peachananr/onepage-scroll/master/jquery.onepage-scroll.js"></script>
+	<script src="https://smtpjs.com/v2/smtp.js"></script>
 	<script src="js/particles.js"></script>
 	<script src="js/main.js"></script>
 
@@ -19,12 +20,11 @@
 <body>
 
 	<nav>
-		<img class="logo" src="./img/logo.svg">
+		<img id="logo" class="logo" src="./img/logo.svg">
+
 		<div class="right">
-			<a href="/students">NEWBIE</a>
-			<a href="/company">COMPANY</a>
-			<a href="/about">ABOUT US</a>
-			<a href="/login">SIGN IN</a>
+			<a id="about-us">About us</a>
+			<a id="contact-us">Contact</a>
 		</div>
 	</nav>
 	<aside>
@@ -89,28 +89,31 @@
 				<div class="contact-left">
 					<div class="contact-content">
 						<h1>KONTAKT.</h1>
-						<p>hello@code-ed.de</p>
+						<p href="mailto:hello@code-ed.de">hello@code-ed.de</p>
 						<div class="contact-box">
 							<p>
 								Hinterlasse uns eine Nachricht. Mit [Strg]+[s] schickst du die Nachricht ab.
 							</p>
 							<div class="topic">
-								~ Betreff# <input type="text" placeholder="Gib hier den Betreff ein"><br> ~ Absender#
-								<input type="text" placeholder="Gib hier deine Kontaktmail ein"><br> ~ Nachricht#
-								<br><textarea placeholder="Gib hier deine Nachricht ein"></textarea>
+								~ Betreff# <input id="mail-subject" type="text" placeholder="Gib hier den Betreff ein"><br> ~ Absender#
+								<input id="mail-from" type="text" placeholder="Gib hier deine Kontaktmail ein"><br> ~ Nachricht#
+								<br><textarea id="mail-message" placeholder="Gib hier deine Nachricht ein"></textarea>
 							</div>
+						</div>
+						<div id="btn-send">
+							Senden
 						</div>
 					</div>
 				</div>
-				<div class="contact-right">
+				<!-- <div class="contact-right">
 					<div class="contact-content">
 						Content of the right side
 
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="contact-footer">
-				© by CodeEd e.V.
+				© by CodeEd e.V. | <a href="./impress.html">Impressum</a>
 			</div>
 		</section>
 	</div>

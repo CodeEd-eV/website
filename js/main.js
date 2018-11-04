@@ -178,6 +178,15 @@ $(document).ready(function () {
 		}
 	}
 
+	//menu click listener
+	$('#about-us').click(() => {
+		$('.main').moveTo(2);
+	});
+
+	$('#contact-us').click(() => {
+		$('.main').moveTo(5);
+	});
+
 	// indicator click listener
 	$.map($('.dot'), (val, index) => {
 		$(val).click(() => {
@@ -193,4 +202,85 @@ $(document).ready(function () {
 		let newColor = index === $('.dot').length ? 'var(--action)' : 'var(--primary2)';
 		$('.dot:eq(' + --index + ')').css('background-color', newColor);
 	}
+
+	function sendMail() {
+
+		let subject = $('#mail-subject').val();
+		if (subject.trim() === '') {
+			setMailStatus('Bitte Betreff angeben!');
+			return;
+		}
+
+
+		let from = $('#mail-from').val();
+		if (from.trim() === '') {
+			setMailStatus('Bitte Absender Adresse angeben!');
+			return;
+		}
+
+		if (!validateEmail(from)) {
+			setMailStatus('Bitte korrekte Email als Absender Adresse angeben!');
+			return;
+		}
+
+
+		let message = $('#mail-message').val();
+		if (message.trim() === '') {
+			setMailStatus('Bitte Nachricht eingeben!');
+			return;
+		}
+		console.log(subject);
+
+
+		Email.send("from@you.com",
+			"to@them.com",
+			"This is a subject",
+			"this is the body",
+			"smtp.yourisp.com",
+			"username",
+			"password",
+			function done(message) {
+				setMailStatus('Mail wurde versandt!');
+				resetMailInputs();
+			});
+	}
+
+	function setMailStatus(message) {
+		$('.contact-content').append(`<p class="mail-status">${message}<p>`);
+		setTimeout(() => {
+			$('.mail-status').fadeOut(500, () => {
+				$(this).remove();
+			});
+		}, 3000);
+	}
+
+	function resetMailInputs() {
+		$('#mail-subject').val('');
+		$('#mail-from').val('');
+		$('#mail-message').val('');
+	}
+
+	function validateEmail(email) {
+		var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return re.test(email);
+	}
+
+
+	//send mail listener
+	$('#btn-send').click(() => {
+		sendMail();
+	});
+
+	$(window).keydown(function (e) {
+		if ((e.metaKey || e.ctrlKey) && e.keyCode == 83) { /*ctrl+s or command+s*/
+			sendMail();
+			e.preventDefault();
+			return false;
+		}
+	});
+
+	//header logo click
+	$('#logo').click(() => {
+		$('.main').moveTo(0);
+	});
 });

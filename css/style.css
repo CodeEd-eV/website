@@ -18,6 +18,22 @@ body {
     z-index: 0;
 }
 
+#btn-send{
+	margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid var(--light);
+    border-radius: 20px;
+    margin-right: 20px;
+	transition: all .3s;
+	width: 65px;
+}
+
+#btn-send:hover{
+	background-color: var(--light);
+    color: var(--text);
+    cursor: pointer;
+}
+
 .onepage-pagination{
 	left: 30px;
 }
@@ -50,7 +66,8 @@ nav img {
 nav a {
     color: var(--light);
     text-decoration: none;
-    padding: 0 10px;
+	padding: 0 10px;
+	cursor: pointer;
 }
 
 aside {
@@ -95,6 +112,10 @@ section{
 
 section .landing-content{
 	padding: 20%;
+}
+
+.landing-content p{
+	line-height: 2.3;
 }
 
 
@@ -147,14 +168,21 @@ section .landing-content{
     margin-right: 20px;
 }
 
+.contact-footer a{
+	text-decoration: none;
+	cursor: pointer;
+	color: var(--light);
+}
+
 .contact-content-wrapper{
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 }
 
 .contact-content-wrapper > .contact-left, .contact-content-wrapper >.contact-right{
 	padding: 0px;
-	width: 50%;
+	/* width: 50%; enable when you need right content area*/	
 	padding-top: 50px;
 }
 
@@ -199,7 +227,8 @@ section .landing-content{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-left: 150px !important;
+	padding-left: 20% !important;
+	padding-right: 10% !important;
 }
 
 #particles-js {
