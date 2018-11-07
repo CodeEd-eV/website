@@ -234,12 +234,12 @@ $(document).ready(function () {
 		$.ajax({
 			type: 'POST',
 			url: 'https://rooftop-finder-py.azurewebsites.net/api/mailtest?code=ivqxkLQy4aLPC4b2zUXUACcN5wrrvaGUBiFDnPLNdSEaSnL5i65YMQ==&clientId=default',
-			data: {
+			data: JSON.stringify({
 				"fromEmail": from,
 				"toEmail": "christian.diemers@gmail.com",
 				"subject": subject,
 				"message": message
-			},
+			}),
 			headers: {
 				'Content-Type': 'application/json',
 				'Access-Control-Allow-Origin': '*',
