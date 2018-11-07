@@ -241,7 +241,7 @@ $(document).ready(function () {
 				"message": message
 			},
 			headers: {
-				'Content-Type': 'application/json',
+				'Content-Type': 'text/plain',
 				'Access-Control-Allow-Origin': '*',
 				'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
 				'Access-Control-Allow-Headers': 'X-Requested-With'
