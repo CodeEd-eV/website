@@ -114,6 +114,16 @@ section .landing-content{
 	padding: 20%;
 }
 
+.landing-box{
+	background-color: #175892d1;
+    box-shadow: 1px 1;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 1px 1px 8px 0px #00000061;
+}
+
 .landing-content p{
 	line-height: 2;
 	font-size: 1.5em;
