@@ -236,8 +236,11 @@ $(document).ready(function () {
 			url: 'https://api.sendgrid.com/v3/mail/send',
 			data: `{"personalizations": [{"to": [{"email": "christian.diemers@gmail.com"}],[{"email": "hello@code-ed.de"}]}],"from": {"email": "${from}"},"subject": "${subject}","content": [{"type": "text/plain", "value": "${message}"}]}`,
 			headers: {
-				'Authorization': 'Bearer ' + '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',
-				'Content-Type': 'application/json'
+				'Authorization': 'Bearer ' + '',
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+				'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
+				'Access-Control-Allow-Headers': 'X-Requested-With'
 			},
 			success: function (msg) {
 				setMailStatus('Mail send! We will contact you back soon.')
