@@ -231,18 +231,21 @@ $(document).ready(function () {
 		}
 		console.log(subject);
 
-
-		Email.send("from@you.com",
-			"to@them.com",
-			"This is a subject",
-			"this is the body",
-			"smtp.yourisp.com",
-			"username",
-			"password",
-			function done(message) {
-				setMailStatus('Mail wurde versandt!');
-				resetMailInputs();
-			});
+		$.ajax({
+			type: 'POST',
+			url: 'https://api.sendgrid.com/v3/mail/send',
+			data: `{"personalizations": [{"to": [{"email": "christian.diemers@gmail.com"}],[{"email": "hello@code-ed.de"}]}],"from": {"email": "${from}"},"subject": "${subject}","content": [{"type": "text/plain", "value": "${message}"}]}`,
+			headers: {
+				'Authorization': 'Bearer ' + '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',
+				'Content-Type': 'application/json'
+			},
+			success: function (msg) {
+				setMailStatus('Mail send! We will contact you back soon.')
+			},
+			error: function (XMLHttpRequest, textStatus, errorThrown) {
+				setMailStatus('Sending the mail failed :/. Please contact hello@code-ed.de directly...')
+			}
+		});
 	}
 
 	function setMailStatus(message) {
