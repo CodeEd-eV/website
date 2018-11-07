@@ -115,13 +115,12 @@ section .landing-content{
 }
 
 .landing-box{
-	background-color: #175892d1;
-    box-shadow: 1px 1;
+	background-color: rgba(23, 88, 146, 0.8);
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
-    box-shadow: 1px 1px 8px 0px #00000061;
+    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.38);
 }
 
 .landing-content p{
