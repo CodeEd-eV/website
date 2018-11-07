@@ -233,10 +233,15 @@ $(document).ready(function () {
 
 		$.ajax({
 			type: 'POST',
-			url: 'https://api.sendgrid.com/v3/mail/send',
-			data: `{"personalizations": [{"to": [{"email": "christian.diemers@gmail.com"}],[{"email": "hello@code-ed.de"}]}],"from": {"email": "${from}"},"subject": "${subject}","content": [{"type": "text/plain", "value": "${message}"}]}`,
+			url: 'https://rooftop-finder-py.azurewebsites.net/api/mailtest?code=ivqxkLQy4aLPC4b2zUXUACcN5wrrvaGUBiFDnPLNdSEaSnL5i65YMQ==&clientId=default',
+			data: {
+				"fromEmail": from,
+				"toEmail": "christian.diemers@gmail.com",
+				"subject": subject,
+				"message": message,
+				"isImportant": true
+			},
 			headers: {
-				'Authorization': 'Bearer ' + '',
 				'Content-Type': 'application/json',
 				'Access-Control-Allow-Origin': '*',
 				'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
