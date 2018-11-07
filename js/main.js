@@ -229,7 +229,6 @@ $(document).ready(function () {
 			setMailStatus('Bitte Nachricht eingeben!');
 			return;
 		}
-		console.log(subject);
 
 		$.ajax({
 			type: 'POST',
@@ -247,7 +246,8 @@ $(document).ready(function () {
 				'Access-Control-Allow-Headers': 'X-Requested-With'
 			},
 			success: function (msg) {
-				setMailStatus('Mail send! We will contact you back soon.')
+				setMailStatus('Mail send! We will contact you back soon.');
+				resetMailInputs();
 			},
 			error: function (XMLHttpRequest, textStatus, errorThrown) {
 				setMailStatus('Sending the mail failed :/. Please contact hello@code-ed.de directly...')
@@ -276,7 +276,7 @@ $(document).ready(function () {
 	}
 
 
-	//send mail listener
+	//send mail listeners
 	$('#btn-send').click(() => {
 		sendMail();
 	});
