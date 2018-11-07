@@ -238,8 +238,7 @@ $(document).ready(function () {
 				"fromEmail": from,
 				"toEmail": "christian.diemers@gmail.com",
 				"subject": subject,
-				"message": message,
-				"isImportant": true
+				"message": message
 			},
 			headers: {
 				'Content-Type': 'application/json',
