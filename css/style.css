@@ -1,14 +1,49 @@
-@media (max-width: 760px) { 
+/* Small Screen */
+@media (min-width: 300px) and (max-width: 760px) { 
+
+	.jumbotron h1{
+		padding-left: 10px!important;
+		padding-right: 10px!important;	
+	}
+
+	.jumbotron .targets{
+		flex-direction: column !important;
+		text-align: center !important;
+	}
+
+	.students{
+		margin-bottom: 10px !important;
+	}
+
+	aside{
+		min-width: 80px !important;
+	}
+
 	.landing-content h2{
 		font-size: 2em !important;
 	}
 
 	.landing-content p{
-	  font-size: 1.2em !important;
+	  font-size: 0.9em !important;
 	  }
 	  
 	  .landing-content{
-		  padding-right: 10% !important;
+		  padding-right: 5% !important;
+	  }
+}
+
+/* Large Screen */
+@media (min-width: 760px) { 
+	.landing-content h2{
+		font-size: 3em !important;
+	}
+
+	.landing-content p{
+	  font-size: 1.5em !important;
+	  }
+	  
+	  .landing-content{
+		  padding-right: 20% !important;
 	  }
 }
 
