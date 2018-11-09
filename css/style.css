@@ -1,52 +1,3 @@
-/* Small Screen */
-@media (min-width: 300px) and (max-width: 760px) { 
-
-	.jumbotron h1{
-		padding-left: 10px!important;
-		padding-right: 10px!important;	
-	}
-
-	.jumbotron .targets{
-		flex-direction: column !important;
-		text-align: center !important;
-	}
-
-	.students{
-		margin-bottom: 10px !important;
-	}
-
-	aside{
-		min-width: 80px !important;
-	}
-
-	.landing-content h2{
-		font-size: 2em !important;
-	}
-
-	.landing-content p{
-	  font-size: 0.9em !important;
-	  }
-	  
-	  .landing-content{
-		  padding-right: 5% !important;
-	  }
-}
-
-/* Large Screen */
-@media (min-width: 760px) { 
-	.landing-content h2{
-		font-size: 3em !important;
-	}
-
-	.landing-content p{
-	  font-size: 1.5em !important;
-	  }
-	  
-	  .landing-content{
-		  padding-right: 20% !important;
-	  }
-}
-
 html, body {
     height: 100%;
 }
@@ -310,4 +261,53 @@ section .landing-content{
     width: 100%;
     height: calc(100% - 30px);
     z-index: -1;
+}
+
+/* Small Screen */
+@media (min-width: 300px) and (max-width: 760px) { 
+
+	.jumbotron h1{
+		padding-left: 10px;
+		padding-right: 10px;	
+	}
+
+	.jumbotron .targets{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.students{
+		margin-bottom: 10px ;
+	}
+
+	aside{
+		min-width: 80px;
+	}
+
+	.landing-content h2{
+		font-size: 2em;
+	}
+
+	.landing-content p{
+	  font-size: 0.9em;
+	  }
+	  
+	  .landing-content{
+		  padding-right: 5%;
+	  }
+}
+
+/* Large Screen */
+@media (min-width: 760px) { 
+	.landing-content h2{
+		font-size: 3em;
+	}
+
+	.landing-content p{
+	  font-size: 1.5em;
+	  }
+	  
+	  .landing-content{
+		  padding-right: 20%;
+	  }
 }
