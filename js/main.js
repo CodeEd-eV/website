@@ -1,3 +1,63 @@
+let content = [
+	[
+		`About us 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+		standard dummy
+		text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+		specimen book`,
+		`About us 2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+		standard dummy
+		text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+		specimen book`,
+		`About us 3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+		standard dummy
+		text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+		specimen book`
+	], [
+		`Member 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+		standard dummy
+		text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+		specimen book`,
+		`Member 2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+		standard dummy
+		text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+		specimen book`,
+		`Member 3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+		standard dummy
+		text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+		specimen book`
+	], [
+		`Partner 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+		standard dummy
+		text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+		specimen book`,
+		`Partner 2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+		standard dummy
+		text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+		specimen book`,
+		`Partner 3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+		standard dummy
+		text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+		specimen book`
+	],
+];
+
+let headings = [
+	[
+		'ÜBER UNS 1',
+		'ÜBER UNS 2',
+		'ÜBER UNS 3',
+	], [
+		'Member 1',
+		'Member 2',
+		'Member 3',
+	], [
+		'Partner 1',
+		'Partner 2',
+		'Partner 3',
+	]
+
+]
+
 $(document).ready(function () {
 
 	// one pager init, see https://github.com/peachananr/onepage-scroll for docs
@@ -180,7 +240,30 @@ $(document).ready(function () {
 
 	//menu click listener
 	$('#about-us').click(() => {
-		$('.main').moveTo(2);
+		$('.landing-text').each((i, el) => {
+			$(el).html(content[0][i]);
+		});
+		$('.landing-heading').each((i, el) => {
+			$(el).html(headings[0][i]);
+		});
+	});
+
+	$('#member').click(() => {
+		$('.landing-text').each((i, el) => {
+			$(el).html(content[1][i]);
+		});
+		$('.landing-heading').each((i, el) => {
+			$(el).html(headings[1][i]);
+		});
+	});
+
+	$('#partner').click(() => {
+		$('.landing-text').each((i, el) => {
+			$(el).html(content[2][i]);
+		});
+		$('.landing-heading').each((i, el) => {
+			$(el).html(headings[2][i]);
+		});
 	});
 
 	$('#contact-us').click(() => {
