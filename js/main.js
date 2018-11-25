@@ -246,6 +246,8 @@ $(document).ready(function () {
 		$('.landing-heading').each((i, el) => {
 			$(el).html(headings[0][i]);
 		});
+
+		$('.main').moveTo(2);
 	});
 
 	$('#member').click(() => {
@@ -255,6 +257,8 @@ $(document).ready(function () {
 		$('.landing-heading').each((i, el) => {
 			$(el).html(headings[1][i]);
 		});
+		$('.main').moveTo(2);
+
 	});
 
 	$('#partner').click(() => {
@@ -264,6 +268,8 @@ $(document).ready(function () {
 		$('.landing-heading').each((i, el) => {
 			$(el).html(headings[2][i]);
 		});
+		$('.main').moveTo(2);
+
 	});
 
 	$('#contact-us').click(() => {
@@ -277,6 +283,26 @@ $(document).ready(function () {
 		});
 	});
 
+	// random copy & paste function to extract URL parameter
+	$.urlParam = function (name) {
+		var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+		return results[1] || 0;
+	}
+	// show correct page on load (content parameter in URL), this happens when navigating here from the about HTML file
+	let contentParam = $.urlParam('content');
+
+	if (contentParam == 0 || contentParam == 1 || contentParam == 2) {
+
+		$('.landing-text').each((i, el) => {
+			$(el).html(content[contentParam][i]);
+		});
+		$('.landing-heading').each((i, el) => {
+			$(el).html(headings[contentParam][i]);
+		});
+
+	} else if (contentParam === 'contact') {
+		$('.main').moveTo(5);
+	}
 	// set correct scroll indicator color
 	function markAsideDot(index) {
 		// reset color
