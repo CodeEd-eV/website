@@ -48,3 +48,31 @@ nav a{
 .member p{
 
 }
+
+#sub-content{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+}
+
+#sub-content div{
+	width: 100%;
+	height: 400px;
+	flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#sub-content #left{
+
+}
+
+a{
+	text-decoration: none;
+}
+
+.external-link{
+	margin-top: 15px;
+}

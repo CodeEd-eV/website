@@ -286,6 +286,9 @@ $(document).ready(function () {
 	// random copy & paste function to extract URL parameter
 	$.urlParam = function (name) {
 		var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+		if (!results) {
+			return null;
+		}
 		return results[1] || 0;
 	}
 	// show correct page on load (content parameter in URL), this happens when navigating here from the about HTML file
@@ -299,6 +302,8 @@ $(document).ready(function () {
 		$('.landing-heading').each((i, el) => {
 			$(el).html(headings[contentParam][i]);
 		});
+		$('.main').moveTo(2);
+
 
 	} else if (contentParam === 'contact') {
 		$('.main').moveTo(5);
