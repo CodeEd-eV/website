@@ -1,0 +1,50 @@
+body{
+	color: var(--text);
+    background-color: var(--light);
+}
+
+nav{
+	background-color: var(--light);
+}
+
+nav a{
+	color: var(--text);
+}
+
+.main{
+	padding-top: 50px;
+	width: 80%;
+	max-width: 900px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.main p{
+	text-align: justify;
+}
+
+#members{
+	display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.member{
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	margin: 5px 25px;
+}
+
+.member img{
+	border-radius: 50%;
+	height: 90px;
+	width: 90px;
+}
+
+.member p{
+
+}

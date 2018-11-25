@@ -1,14 +1,14 @@
 let content = [
 	[
-		`About us 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+		`Newbie us 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
 		standard dummy
 		text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
 		specimen book`,
-		`About us 2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+		`Newbie us 2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
 		standard dummy
 		text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
 		specimen book`,
-		`About us 3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+		`Newbie us 3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
 		standard dummy
 		text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
 		specimen book`
@@ -43,9 +43,9 @@ let content = [
 
 let headings = [
 	[
-		'ÜBER UNS 1',
-		'ÜBER UNS 2',
-		'ÜBER UNS 3',
+		'Newbie 1',
+		'Newbie 2',
+		'Newbie 3',
 	], [
 		'Member 1',
 		'Member 2',
@@ -239,7 +239,7 @@ $(document).ready(function () {
 	}
 
 	//menu click listener
-	$('#about-us').click(() => {
+	$('#newbie').click(() => {
 		$('.landing-text').each((i, el) => {
 			$(el).html(content[0][i]);
 		});
