@@ -169,6 +169,19 @@ section .landing-content{
     cursor: pointer;
 }
 
+#partners-wrapper{
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	justify-content: space-around;
+	padding-top: 20px;
+}
+
+#partners-wrapper > img{
+	width: auto;
+	height: 140px;
+}
+
 .contact-wrapper{
 	background-color: var(--primary2);
 	display: flex;
@@ -304,8 +317,19 @@ section .landing-content{
 	  margin-bottom: 0px;
 	}
 	  
-	  .landing-content{
+	.landing-content{
 		  padding-right: 5%;
+	}
+
+	#partners-wrapper{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#partners-wrapper > img{
+		height: auto;
+		width: 140px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -317,9 +341,9 @@ section .landing-content{
 
 	.landing-content p{
 	  font-size: 1.5em;
-	  }
+	}
 	  
-	  .landing-content{
-		  padding-right: 20%;
-	  }
+	.landing-content{
+		padding-right: 20%;
+	}	
 }
