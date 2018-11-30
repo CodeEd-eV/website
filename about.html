@@ -22,6 +22,8 @@
 
 	<script stype="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	 crossorigin="anonymous"></script>
+	<script src="js/about-us.js"></script>
+
 
 <body>
 
@@ -30,8 +32,8 @@
 
 		<div class="right">
 			<a id="newbie" href="./index.html">Newbie</a>
-			<a id="partner" href="./company.html">Companies</a>
-			<a id="about-us" href="./about.html">About us</a>
+			<!-- <a id="partner" href="./company.html">Companies</a> -->
+			<!-- <a id="about-us">About us</a> -->
 			<a id="contact-us">Contact</a>
 		</div>
 	</nav>
@@ -118,6 +120,38 @@
 			</div id="right">
 		</div>
 	</div>
+	<section class="contact-wrapper">
+		<div class="contact-content-wrapper">
+			<div class="contact-left">
+				<div class="contact-content">
+					<h1>KONTAKT.</h1>
+					<p class="contact-mail" href="mailto:hello@code-ed.de">hello@code-ed.de</p>
+					<div class="contact-box">
+						<p>
+							Hinterlasse uns eine Nachricht. Mit [Strg]+[s] schickst du die Nachricht ab.
+						</p>
+						<div class="topic">
+							~ Betreff# <input id="mail-subject" type="text" placeholder="Gib hier den Betreff ein"><br> ~ Absender#
+							<input id="mail-from" type="text" placeholder="Gib hier deine Kontaktmail ein"><br> ~ Nachricht#
+							<br><textarea id="mail-message" placeholder="Gib hier deine Nachricht ein"></textarea>
+						</div>
+					</div>
+					<div id="btn-send">
+						Senden
+					</div>
+				</div>
+			</div>
+			<!-- <div class="contact-right">
+					<div class="contact-content">
+						Content of the right side
+
+					</div>
+				</div> -->
+		</div>
+		<div class="contact-footer">
+			© by CodeEd e.V. | <a href="./impress.html">Impressum</a>
+		</div>
+	</section>
 </body>
 
 </html>
