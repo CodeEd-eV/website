@@ -30,7 +30,6 @@ let members = [
 		"userid": "UCYAYU7NU",
 		"fullname": "Tobias Urban",
 		"displayname": "Tobi",
-		"img": "AndreasZimmerer.jpg"
 	},
 	{
 		"username": "jannlukas.meier",
@@ -47,7 +46,8 @@ let members = [
 		"billing-active": 1,
 		"userid": "UCYDF8CG1",
 		"fullname": "Andreas Zimmerer",
-		"displayname": "Andreas"
+		"displayname": "Andreas",
+		"img": "AndreasZimmerer.jpg"
 	},
 	{
 		"username": "christian.diemers",
