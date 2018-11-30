@@ -219,6 +219,8 @@ $(document).ready(function () {
 		$('.dot:eq(' + --index + ')').css('background-color', newColor);
 	}
 
+	markAsideDot(1);
+
 	//header logo click
 	$('#logo').click(() => {
 		$('.main').moveTo(0);
