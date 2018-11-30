@@ -1,32 +1,11 @@
-$(document).ready(function () {
-	$('#contact-us').click(() => {
-		$('html, body').animate({
-			scrollTop: $('.contact-wrapper').offset().top
-		}, 1000);
-	});
-
-	$('#about-us').click(() => {
-		$('html, body').animate({
-			scrollTop: 0
-		}, 1000);
-	});
-
-	members.forEach(member => {
-		let img = member.img ? './img/members/' + member.img : 'https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';
-		$('#members').append(`			
-			<div class="member">
-				<img src="${img}" alt="">
-			<p>${member.fullname}</p>
-		</div>`
-		)
-	});
-});
-
-let members = [
+[
 	{
 		"username": "turban2009",
+		"email": "turban2009@live.de",
 		"status": "Administrator",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UCYAYU7NU",
 		"fullname": "Tobias Urban",
 		"displayname": "Tobi",
@@ -34,8 +13,11 @@ let members = [
 	},
 	{
 		"username": "jannlukas.meier",
+		"email": "jannlukas.meier@icloud.com",
 		"status": "Primärer Inhaber",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UCYDBQFGR",
 		"fullname": "Jann-Lukas Meier",
 		"displayname": "Jann-Lukas",
@@ -43,8 +25,11 @@ let members = [
 	},
 	{
 		"username": "andreas.zimmerer",
+		"email": "andreas.zimmerer@tum.de",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UCYDF8CG1",
 		"fullname": "Andreas Zimmerer",
 		"displayname": "Andreas"
@@ -54,6 +39,8 @@ let members = [
 		"email": "christian.diemers@gmail.com",
 		"status": "Administrator",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UCYDHL3PT",
 		"fullname": "Christian Diemers",
 		"displayname": "",
@@ -61,8 +48,11 @@ let members = [
 	},
 	{
 		"username": "oliver.heilmann",
+		"email": "oliver.heilmann@gmx.net",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UCYDQ39B3",
 		"fullname": "Oliver Heilmann",
 		"displayname": "oliver",
@@ -70,8 +60,11 @@ let members = [
 	},
 	{
 		"username": "robert.graf",
+		"email": "robert.graf@studentpartners.de",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UCYR52YBW",
 		"fullname": "Robert Graf",
 		"displayname": "Robert"
@@ -81,6 +74,8 @@ let members = [
 		"email": "yannickstach@googlemail.com",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UCYTY3RMZ",
 		"fullname": "Yannick Stachelscheid",
 		"displayname": "",
@@ -88,32 +83,44 @@ let members = [
 	},
 	{
 		"username": "justin",
+		"email": "justin@luebbers.biz",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UCZ7E21U2",
 		"fullname": "Justin Lübbers",
 		"displayname": ""
 	},
 	{
 		"username": "ga84mov",
+		"email": "ga84mov@mytum.de",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UCZUJ6GLT",
 		"fullname": "Clara Lea B.",
 		"displayname": ""
 	},
 	{
 		"username": "nico.thule",
+		"email": "nico.thule@tum.de",
 		"status": "Deaktiviert",
 		"billing-active": 0,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UD03E1R63",
 		"fullname": "Nicolas Thule",
 		"displayname": "Nico Thule"
 	},
 	{
 		"username": "minhchau.lu",
+		"email": "minhchau.lu@tum.de",
 		"status": "Administrator",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UD04BRWBH",
 		"fullname": "Minh Chau Lu",
 		"displayname": "",
@@ -121,32 +128,44 @@ let members = [
 	},
 	{
 		"username": "t.klesel",
+		"email": "t.klesel@gmx.de",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UD0BSKXF0",
 		"fullname": "Tobias Klesel",
 		"displayname": ""
 	},
 	{
 		"username": "m.schrader",
+		"email": "m.schrader@tum.de",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UD0BUFK3L",
 		"fullname": "Max Schrader",
 		"displayname": "Max Schrader"
 	},
 	{
 		"username": "frankz.lu",
+		"email": "frankz.lu@googlemail.com",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UD0C0MCBG",
 		"fullname": "Frank",
 		"displayname": ""
 	},
 	{
 		"username": "jakob.vonderhaar",
+		"email": "jakob.vonderhaar@gmx.de",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UD0GHSF4N",
 		"fullname": "Jakob von der Haar",
 		"displayname": "Jakob",
@@ -154,24 +173,33 @@ let members = [
 	},
 	{
 		"username": "a.schaetzle",
+		"email": "a.schaetzle@isi.de",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UD0KZJVL1",
 		"fullname": "Anna Schätzle",
 		"displayname": "Anna Maria"
 	},
 	{
 		"username": "googledrive",
+		"email": "botuser-TCYTJMA75-BD0L8UEQ4@slack-bots.com",
 		"status": "Bot",
 		"billing-active": 0,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UD0RTD3JN",
 		"fullname": "Google Drive",
 		"displayname": ""
 	},
 	{
 		"username": "janosch-l.mail",
+		"email": "janosch-l.mail@gmx.de",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UD4HVM4MT",
 		"fullname": "Janosch Landvogt",
 		"displayname": "",
@@ -179,16 +207,22 @@ let members = [
 	},
 	{
 		"username": "alina23.ickler",
+		"email": "alina23.ickler@gmail.com",
 		"status": "Deaktiviert",
 		"billing-active": 0,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UD77NMNH5",
 		"fullname": "Alina Ickler",
 		"displayname": "Alina I."
 	},
 	{
 		"username": "fabian",
+		"email": "fabian@hoeltke.com",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UD8LEBFLH",
 		"fullname": "Fabian Höltke",
 		"displayname": "Fabi",
@@ -199,8 +233,8 @@ let members = [
 		"email": "sabrina.stoeckl@t-online.de",
 		"status": "Mitglied",
 		"billing-active": 1,
-
-
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UDA2W82PK",
 		"fullname": "Sabrina Stöckl",
 		"displayname": "Sabrina",
@@ -208,16 +242,22 @@ let members = [
 	},
 	{
 		"username": "florian-haberler",
+		"email": "florian-haberler@web.de",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UDAJ0T6LB",
 		"fullname": "Florian Haberler",
 		"displayname": "Flo"
 	},
 	{
 		"username": "mike.degmayr",
+		"email": "mike.degmayr@whu.edu",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UDE2S1YCS",
 		"fullname": "Mike Degmayr",
 		"displayname": "Mike",
@@ -225,8 +265,11 @@ let members = [
 	},
 	{
 		"username": "sebastian.aigner",
+		"email": "sebastian.aigner@me.com",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UDJQHLZSP",
 		"fullname": "Sebastian Aigner",
 		"displayname": "Sebastian",
@@ -234,8 +277,11 @@ let members = [
 	},
 	{
 		"username": "sonja.goerlich",
+		"email": "sonja.goerlich@aol.de",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UDQ22065S",
 		"fullname": "Sonja Goerlich",
 		"displayname": "Sonja",
@@ -243,10 +289,13 @@ let members = [
 	},
 	{
 		"username": "nina.stolle",
+		"email": "nina.stolle@gmail.com",
 		"status": "Mitglied",
 		"billing-active": 1,
+		"has-2fa": 0,
+		"has-sso": 0,
 		"userid": "UDR67RBF1",
 		"fullname": "Nina Stolle",
 		"displayname": "Nina"
 	}
-];
+]
