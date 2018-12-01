@@ -81,6 +81,11 @@ a{
 	color: var(--light);
 }
 
+.contact-content-wrapper > .contact-left{
+	padding-left: 5%;
+    padding-right: 5%; 
+}
+
 .contact-content-wrapper{
 	margin-bottom: 20px;
 }

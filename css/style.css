@@ -174,11 +174,13 @@ section{
 	flex: 1;
 	justify-content: space-around;
 	padding-top: 20px;
+	flex-wrap: wrap;
 }
 
 #partners-wrapper > img{
 	width: auto;
 	height: 140px;
+	
 }
 
 .contact-wrapper{
@@ -224,6 +226,8 @@ section{
 	padding: 0px;
 	/* width: 50%; enable when you need right content area*/	
 	padding-top: 50px;
+	padding-left: 11%;
+	padding-right: 4%;
 }
 
 .contact-box{
@@ -259,7 +263,8 @@ section{
     outline: none;
 	width: 100%;
 	max-width: 100%;
-	height: 180px;
+	height: 100px;
+	max-height: 180px;
 	margin-top: 5px;
 }
 
@@ -267,8 +272,6 @@ section{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-left: 20% !important;
-	padding-right: 10% !important;
 }
 
 #particles-js {
@@ -311,8 +314,14 @@ section{
 		margin-top: 10px;
 	}
 
+	.landing-box{
+		padding-right: 10px;
+	}
+
 	.landing-content h2{
 		font-size: 2em;
+		margin-bottom: 0px;
+		margin-top: 2px;
 	}
 
 	.landing-content p{
@@ -326,13 +335,12 @@ section{
 	}
 
 	#partners-wrapper{
-		flex-direction: column;
 		align-items: center;
 	}
 
 	#partners-wrapper > img{
 		height: auto;
-		width: 140px;
+		width: 80px;
 		margin-bottom: 20px;
 	}
 }
