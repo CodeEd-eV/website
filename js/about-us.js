@@ -41,13 +41,25 @@ let members = [
 		"img": "JannLukasMaier.png"
 	},
 	{
-		"username": "andreas.zimmerer",
+		"username": "minhchau.lu",
+		"status": "Administrator",
+		"billing-active": 1,
+		"userid": "UD04BRWBH",
+		"fullname": "Minh Chau Lu",
+		"displayname": "",
+		"img": "MinhChauLu.jpg"
+	},
+	{
+		"username": "sabrina.stoeckl",
+		"email": "sabrina.stoeckl@t-online.de",
 		"status": "Mitglied",
 		"billing-active": 1,
-		"userid": "UCYDF8CG1",
-		"fullname": "Andreas Zimmerer",
-		"displayname": "Andreas",
-		"img": "AndreasZimmerer.jpg"
+
+
+		"userid": "UDA2W82PK",
+		"fullname": "Sabrina Stöckl",
+		"displayname": "Sabrina",
+		"img": "SabrinaStöckl.jpg"
 	},
 	{
 		"username": "christian.diemers",
@@ -75,6 +87,15 @@ let members = [
 		"userid": "UCYR52YBW",
 		"fullname": "Robert Graf",
 		"displayname": "Robert"
+	},
+	{
+		"username": "sonja.goerlich",
+		"status": "Mitglied",
+		"billing-active": 1,
+		"userid": "UDQ22065S",
+		"fullname": "Sonja Goerlich",
+		"displayname": "Sonja",
+		"img": "SonjaGoerlich.jpg"
 	},
 	{
 		"username": "yannickstach",
@@ -109,15 +130,6 @@ let members = [
 		"userid": "UD03E1R63",
 		"fullname": "Nicolas Thule",
 		"displayname": "Nico Thule"
-	},
-	{
-		"username": "minhchau.lu",
-		"status": "Administrator",
-		"billing-active": 1,
-		"userid": "UD04BRWBH",
-		"fullname": "Minh Chau Lu",
-		"displayname": "",
-		"img": "MinhChauLu.jpg"
 	},
 	{
 		"username": "t.klesel",
@@ -195,18 +207,6 @@ let members = [
 		"img": "Fabi.jpg"
 	},
 	{
-		"username": "sabrina.stoeckl",
-		"email": "sabrina.stoeckl@t-online.de",
-		"status": "Mitglied",
-		"billing-active": 1,
-
-
-		"userid": "UDA2W82PK",
-		"fullname": "Sabrina Stöckl",
-		"displayname": "Sabrina",
-		"img": "SabrinaStöckl.jpg"
-	},
-	{
 		"username": "florian-haberler",
 		"status": "Mitglied",
 		"billing-active": 1,
@@ -231,15 +231,6 @@ let members = [
 		"fullname": "Sebastian Aigner",
 		"displayname": "Sebastian",
 		"img": "SebastianAigner.jpg"
-	},
-	{
-		"username": "sonja.goerlich",
-		"status": "Mitglied",
-		"billing-active": 1,
-		"userid": "UDQ22065S",
-		"fullname": "Sonja Goerlich",
-		"displayname": "Sonja",
-		"img": "SonjaGoerlich.jpg"
 	},
 	{
 		"username": "nina.stolle",

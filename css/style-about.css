@@ -45,8 +45,13 @@ nav a{
 	width: 90px;
 }
 
-.member p{
+.member {
+	width: 20%;
+	margin: 10px 40px 10px 40px; 
+}
 
+.member p{
+	text-align: center;
 }
 
 #sub-content{
