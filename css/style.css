@@ -135,6 +135,7 @@ section{
 
 .landing-content h2{
 	font-size: 3em;
+	margin-bottom: 0px;
 }
 
 .jumbotron h1 {
@@ -334,6 +335,10 @@ section{
 	  margin-top: 0px;
 	  margin-bottom: 0px;
 	}
+
+	.landing-text{
+		margin-top: 5px;
+	}
 	  
 	.landing-content{
 		  padding-right: 7%;
@@ -361,6 +366,6 @@ section{
 	}
 	  
 	.landing-content{
-		padding-right: 20%;
+		/* padding-right: 20%; */
 	}	
 }
