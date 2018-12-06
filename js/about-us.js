@@ -173,14 +173,6 @@ let members = [
 		"displayname": "Anna Maria"
 	},
 	{
-		"username": "googledrive",
-		"status": "Bot",
-		"billing-active": 0,
-		"userid": "UD0RTD3JN",
-		"fullname": "Google Drive",
-		"displayname": ""
-	},
-	{
 		"username": "janosch-l.mail",
 		"status": "Mitglied",
 		"billing-active": 1,

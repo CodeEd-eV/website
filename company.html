@@ -26,6 +26,8 @@
 	<script src="https://smtpjs.com/v2/smtp.js"></script>
 	<script src="js/particles.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/company.js"></script>
+	<script src="js/sendMail.js"></script>
 </head>
 
 <body>
@@ -60,7 +62,9 @@
 					are you?
 				</h1>
 				<div class="targets">
-					<div class="students">NEWBIE</div>
+					<a href="./index.html?redirect=true">
+						<div class="students">NEWBIE</div>
+					</a>
 					<div class="company">COMPANY</div>
 				</div>
 			</div>
@@ -88,7 +92,8 @@
 						also make for great candidates forinternships or other positions.
 						<br>Our tried and tested approach to attract people to events supports this. Our members bringexperience in event
 						management and have been the driving force behind
-						many loved projectshere in Munich, for example the TUM Computer Science Club and the Munich WebDevWorkshop series
+						many loved projectshere in Munich, for example the TUM Computer Science Club and the Munich WebDevWorkshop
+						series.
 					</p>
 				</div>
 			</div>
@@ -123,29 +128,28 @@
 			<div class="contact-content-wrapper">
 				<div class="contact-left">
 					<div class="contact-content">
-						<h1>KONTAKT.</h1>
-						<p class="contact-mail" href="mailto:hello@code-ed.de">hello@code-ed.de</p>
+						<p class="contact-mail" href="mailto:hello@code-ed.de">Say Hy! hello@code-ed.de</p>
 						<div class="contact-box">
 							<p>
-								Hinterlasse uns eine Nachricht. Mit [Strg]+[s] schickst du die Nachricht ab.
+								Push[Ctrl]+[s] to send.
 							</p>
 							<div class="topic">
-								~ Betreff# <input id="mail-subject" type="text" placeholder="Gib hier den Betreff ein"><br> ~ Absender#
-								<input id="mail-from" type="text" placeholder="Gib hier deine Kontaktmail ein"><br> ~ Nachricht#
-								<br><textarea id="mail-message" placeholder="Gib hier deine Nachricht ein"></textarea>
+								~ Subject# <input id="mail-subject" type="text" placeholder="Subject"><br> ~ Your Address#
+								<input id="mail-from" type="text" placeholder="Your adress"><br> ~ Message#
+								<br><textarea id="mail-message" placeholder="Your message."></textarea>
 							</div>
 						</div>
 						<div id="btn-send">
-							Senden
+							Send
 						</div>
 					</div>
 				</div>
 				<!-- <div class="contact-right">
-					<div class="contact-content">
-						Content of the right side
-
-					</div>
-				</div> -->
+						<div class="contact-content">
+							Content of the right side
+	
+						</div>
+					</div> -->
 			</div>
 			<div class="contact-footer">
 				© by CodeEd e.V. | <a href="./impress.html">Impressum</a>

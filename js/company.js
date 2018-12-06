@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$('.students').click(() => {
+	$('.company').click(() => {
 		$('.main').moveTo(2);
 	});
 });

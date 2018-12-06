@@ -196,20 +196,16 @@ $(document).ready(function () {
 	// show correct page on load (content parameter in URL), this happens when navigating here from the about HTML file
 	let contentParam = $.urlParam('content');
 
-	if (contentParam == 0 || contentParam == 1 || contentParam == 2) {
-
-		$('.landing-text').each((i, el) => {
-			$(el).html(content[contentParam][i]);
-		});
-		$('.landing-heading').each((i, el) => {
-			$(el).html(headings[contentParam][i]);
-		});
-		$('.main').moveTo(2);
-
-
-	} else if (contentParam === 'contact') {
-		$('.main').moveTo(5);
+	if (contentParam === 'contact') {
+		$('.main').moveTo($('.dot').length);
 	}
+
+	let redirect = $.urlParam('redirect');
+	console.log(redirect);
+	if (redirect) {
+		$('.main').moveTo(2);
+	}
+
 	// set correct scroll indicator color
 	function markAsideDot(index) {
 		// reset color
@@ -224,5 +220,10 @@ $(document).ready(function () {
 	//header logo click
 	$('#logo').click(() => {
 		$('.main').moveTo(0);
+	});
+
+	// scroll to contact
+	$('#contact-us').click(() => {
+		$('.main').moveTo($('.dot').length);
 	});
 });

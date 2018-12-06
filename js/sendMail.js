@@ -3,26 +3,26 @@ $(document).ready(function () {
 
 		let subject = $('#mail-subject').val();
 		if (subject.trim() === '') {
-			setMailStatus('Bitte Betreff angeben!');
+			setMailStatus('Please provide a subject!');
 			return;
 		}
 
 
 		let from = $('#mail-from').val();
 		if (from.trim() === '') {
-			setMailStatus('Bitte Absender Adresse angeben!');
+			setMailStatus('Please fill out your adress, so we can contact you back!');
 			return;
 		}
 
 		if (!validateEmail(from)) {
-			setMailStatus('Bitte korrekte Email als Absender Adresse angeben!');
+			setMailStatus('Please provde a correct adress. We really want to contact you back!');
 			return;
 		}
 
 
 		let message = $('#mail-message').val();
 		if (message.trim() === '') {
-			setMailStatus('Bitte Nachricht eingeben!');
+			setMailStatus('Please provide a message. We really want to know what you have to say :)');
 			return;
 		}
 
