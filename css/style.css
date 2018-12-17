@@ -19,13 +19,14 @@ body {
 }
 
 #btn-send{
+	margin: 0 auto;
 	margin-top: 10px;
     padding: 10px 20px;
     border: 1px solid var(--light);
     border-radius: 20px;
-    margin-right: 20px;
 	transition: all .3s;
 	width: 65px;
+	text-align: center;
 }
 
 #btn-send:hover{
@@ -219,6 +220,11 @@ section{
 	justify-content: center;
 }
 
+.contact-content{
+	width: 80%;
+    max-width: 500px;
+}
+
 .contact-content h1{
 	font-size: 2.5em;
 	margin-bottom: 0.5em;
@@ -234,6 +240,7 @@ section{
 	padding-top: 50px;
 	padding-left: 11%;
 	padding-right: 4%;
+	width: 100%
 }
 
 .contact-box{

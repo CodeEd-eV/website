@@ -59,6 +59,7 @@ nav a{
 	display: flex;
 	flex-direction: row;
 	flex-grow: 1;
+	text-align: justify;
 }
 
 #sub-content div{
