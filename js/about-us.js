@@ -124,14 +124,6 @@ let members = [
 		"displayname": ""
 	},
 	{
-		"username": "nico.thule",
-		"status": "Deaktiviert",
-		"billing-active": 0,
-		"userid": "UD03E1R63",
-		"fullname": "Nicolas Thule",
-		"displayname": "Nico Thule"
-	},
-	{
 		"username": "t.klesel",
 		"status": "Mitglied",
 		"billing-active": 1,
