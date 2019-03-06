@@ -120,8 +120,9 @@ let members = [
 		"status": "Mitglied",
 		"billing-active": 1,
 		"userid": "UCZUJ6GLT",
-		"fullname": "Clara Lea B.",
-		"displayname": ""
+		"fullname": "Clara Lea Buchholz",
+		"displayname": "",
+		"img": "ClaraBuchholz.jpg"
 	},
 	{
 		"username": "t.klesel",
